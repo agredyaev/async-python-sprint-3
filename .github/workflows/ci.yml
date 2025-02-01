@@ -50,6 +50,12 @@ jobs:
     - name: Debug PATH
       run: echo $PATH
 
+    - name: Add Virtual Environment to PATH
+      run: echo "${{ github.workspace }}/.venv/bin" >> $GITHUB_PATH
+
+    - name: Debug PATH
+      run: echo $PATH
+
       # 7.1 Install missing stub packages
     - name: Install missing type third-party stubs
       run: |
