@@ -37,8 +37,8 @@ The application provides the following features:
 
 The full documentation is provided in the following sections:
 
-- [API Documentation](docs/api): Full details of the API endpoints, request/response schemas, and examples.
-- [Layered Architecture](docs/layers): Breakdown of the application design into logical layers (Presentation, Business Logic, Data Access, and Infrastructure).
+- [API Documentation](docs/api.md): Full details of the API endpoints, request/response schemas, and examples.
+- [Layered Architecture](docs/layers.md): Breakdown of the application design into logical layers (Presentation, Business Logic, Data Access, and Infrastructure).
 
 ---
 ## Deploy
