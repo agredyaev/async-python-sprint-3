@@ -1,4 +1,10 @@
 
 .idea/
 __pycache__/
+.vscode/
 *.pyc
+*.db
+*.txt
+.venv/
+.env
+test.py
