@@ -31,15 +31,24 @@ jobs:
 
       # 4. Install uv
     - name: Install uv
-      uses: astral-sh/setup-uv@v4
+      uses: astral-sh/setup-uv@v5
+      with:
+        version: latest
 
       # 5. Install python
     - name: Set up Python
       run: uv python install
 
-      # 6. Install the project
+      # 6. Create Virtual Environment
     - name: Install the project
       run: make sync
+
+    # 6.1 Activate Virtual Environment
+    - name: Activate Virtual Environment
+      run: source .venv/bin/activate
+
+    - name: Debug PATH
+      run: echo $PATH
 
       # 7.1 Install missing stub packages
     - name: Install missing type third-party stubs
