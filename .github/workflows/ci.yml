@@ -54,12 +54,12 @@ jobs:
       # 8. Run Ruff Linter and show all errors
     - name: Run Ruff Linter
       run: |
-        echo "${{ needs.check.outputs.changed_files }}" | xargs uv run ruff check --output-format=github --config=pyproject.toml
+        uv run ruff check --output-format=github --config=pyproject.toml .
 
       # 9. Run Mypy Type Checking and show all errors
     - name: Run Mypy Type Checking
       run: |
-        echo "${{ needs.check.outputs.changed_files }}" | xargs uv run mypy --config-file=pyproject.toml
+        uv run mypy --config-file=pyproject.toml .
 
       # 10. Run Pytest
     - name: Run Pytest with conditional migrations
