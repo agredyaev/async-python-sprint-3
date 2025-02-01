@@ -70,7 +70,7 @@ def test_ids():
 
 async def check_port(host: str, port: int) -> bool:
     try:
-        reader, writer = await asyncio.open_connection(host, port)
+        _, writer = await asyncio.open_connection(host, port)
         writer.close()
         await writer.wait_closed()
     except BaseError:
