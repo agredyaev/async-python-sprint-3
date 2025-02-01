@@ -9,7 +9,7 @@ env:
 
 .PHONY: sync
 sync:
-	@uv sync --all-groups
+	@uv sync --all-groups --frozen
 
 .PHONY: setup
 setup:
