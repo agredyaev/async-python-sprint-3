@@ -9,7 +9,7 @@ env:
 
 .PHONY: sync
 sync:
-	@uv sync --all-groups
+	@uv sync --all-groups --frozen
 
 .PHONY: setup
 setup:
@@ -44,12 +44,12 @@ run: sync env
 
 .PHONY: test
 test:
-	pytest --maxfail=10 --disable-warnings --tb=short
+	@pytest --maxfail=10 --disable-warnings --tb=short
 
 
 .PHONY: migrate
 migrate:
-	alembic upgrade head
+	@alembic upgrade head
 
 .PHONY: migrate-test
 migrate-test: migrate test
